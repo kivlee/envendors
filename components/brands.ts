@@ -17,6 +17,7 @@ export const BRANDS: Brand[] = [
   { name: "Stripe", href: "https://stripe.com", src: "/brands/stripe.svg", ratio: 2.4, height: 26 },
   { name: "Kivlee", href: "https://kivlee.io", src: "/brands/kivlee.svg", ratio: 5.28, height: 20 },
   { name: "Amazon", href: "https://www.amazon.com", src: "/brands/amazon.svg", ratio: 3.32, height: 26 },
+  { name: "AWS", href: "https://aws.amazon.com", src: "/brands/aws.svg", ratio: 1.67, height: 32 },
   { name: "Ollama", href: "https://ollama.com", src: "/brands/ollama.svg", ratio: 0.68, height: 28, label: "Ollama" },
   { name: "GitHub", href: "https://github.com", src: "/brands/github.svg", ratio: 3.5, height: 24 },
   { name: "Hostinger", href: "https://www.hostinger.com", src: "/brands/hostinger.svg", ratio: 1.77, height: 36 },
