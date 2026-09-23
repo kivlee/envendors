@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
   // `npm run build` writes the whole site as plain HTML, CSS and JavaScript into
   // out/, ready for any web host. No Node.js server is needed to run it.
   output: "export",
+  // Empty for a normal build. The GitHub Pages build (.github/workflows/pages.yml)
+  // serves the site from /envendors, with each page in its own folder.
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
+  trailingSlash: process.env.NEXT_PUBLIC_TRAILING_SLASH === "1",
   // A stray package-lock.json in the home folder otherwise confuses root detection.
   turbopack: { root: import.meta.dirname },
   allowedDevOrigins: localAddresses,

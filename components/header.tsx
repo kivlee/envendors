@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import SmartLink from "@/components/smart-link";
+import { asset } from "@/lib/paths";
 
 type MenuLink = { label: string; href: string };
 type NavItem = { label: string; href?: string; items?: MenuLink[] };
@@ -183,7 +184,7 @@ export default function Header() {
         <Link href="/" aria-label="Envendors LLC, home" className={`rounded-sm ${focusRing}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/brand/envendors-wordmark-black.svg"
+            src={asset("/brand/envendors-wordmark-black.svg")}
             alt=""
             width={147}
             height={17}

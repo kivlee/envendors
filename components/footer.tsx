@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SmartLink from "@/components/smart-link";
+import { asset } from "@/lib/paths";
 
 type FooterLink = { label: string; href: string };
 type FooterColumn = { title: string; links: FooterLink[] };
@@ -59,7 +60,7 @@ export default function Footer() {
             className="w-fit rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-paper"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/envendors-mark-white.svg" alt="" width={40} height={40} className="-ml-[11px] size-10" />
+            <img src={asset("/brand/envendors-mark-white.svg")} alt="" width={40} height={40} className="-ml-[11px] size-10" />
           </Link>
           <p className="hidden text-[13px] leading-5 text-paper lg:block">
             © {new Date().getFullYear()} Envendors LLC.

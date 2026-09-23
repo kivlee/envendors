@@ -1,4 +1,5 @@
 import { BRANDS, type Brand } from "@/components/brands";
+import { asset } from "@/lib/paths";
 
 // Enough copies of the list to overfill even very wide screens, so the loop
 // never shows a gap. The track holds this set twice and slides by one set.
@@ -23,8 +24,8 @@ function Wordmark({ brand, hidden }: { brand: Brand; hidden: boolean }) {
           style={{
             width: brand.height * brand.ratio,
             height: brand.height,
-            maskImage: `url(${brand.src})`,
-            WebkitMaskImage: `url(${brand.src})`,
+            maskImage: `url(${asset(brand.src)})`,
+            WebkitMaskImage: `url(${asset(brand.src)})`,
             maskSize: "contain",
             WebkitMaskSize: "contain",
             maskRepeat: "no-repeat",

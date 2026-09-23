@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
+import { TRAILING_SLASH } from "@/lib/paths";
 import { SITE_URL } from "@/lib/seo";
 
 // Written once at build time into a plain file (the site is a static export).
@@ -17,5 +18,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
     { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
   ];
-  return pages.map((p) => ({ url: `${SITE_URL}${p.path}`, lastModified, changeFrequency: p.changeFrequency, priority: p.priority }));
+  return pages.map((p) => ({ url: `${SITE_URL}${p.path}${TRAILING_SLASH ? "/" : ""}`, lastModified, changeFrequency: p.changeFrequency, priority: p.priority }));
 }

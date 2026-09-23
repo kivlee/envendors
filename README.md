@@ -32,6 +32,13 @@ This writes the finished site into `out/`. Upload the **contents** of `out/`
 - After launch, add the site to Google Search Console and submit
   `https://envendors.com/sitemap.xml`.
 
+## GitHub Pages
+
+Every push to `main` builds the site and publishes it to
+https://kivlee.github.io/envendors (see `.github/workflows/pages.yml`). That build
+serves the site from `/envendors` with each page in its own folder; a normal
+`npm run build` is unaffected.
+
 ## License
 
 Copyright (c) 2026 Envendors LLC. All rights reserved. This code is proprietary and

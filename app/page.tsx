@@ -4,9 +4,10 @@ import { MotionToggle } from "@/components/motion";
 import { BRANDS } from "@/components/brands";
 import { Button, Container, Section } from "@/components/page";
 import { KIVLEE_LD, jsonLd } from "@/lib/seo";
+import { asset } from "@/lib/paths";
 
 // The ribbon washes into each logo from the strip below, one after another.
-const RIBBON_LOGOS = BRANDS.map((brand) => brand.src);
+const RIBBON_LOGOS = BRANDS.map((brand) => asset(brand.src));
 
 const PRINCIPLES = [
   {
