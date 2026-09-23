@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { MotionProvider } from "@/components/motion";
-import { KEYWORDS, LEGAL_NAME, ORGANIZATION_LD, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL, WEBSITE_LD, jsonLd } from "@/lib/seo";
+import { KEYWORDS, LEGAL_NAME, ORGANIZATION_LD, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SHARE_IMAGE, SITE_URL, WEBSITE_LD, jsonLd } from "@/lib/seo";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -26,8 +26,9 @@ export const metadata: Metadata = {
     url: "/",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
+    images: [SHARE_IMAGE],
   },
-  twitter: { card: "summary_large_image", title: SITE_TITLE, description: SITE_DESCRIPTION },
+  twitter: { card: "summary_large_image", title: SITE_TITLE, description: SITE_DESCRIPTION, images: [SHARE_IMAGE] },
   robots: {
     index: true,
     follow: true,

@@ -43,7 +43,7 @@ export function pageMetadata({ title, description, path }: { title: string; desc
 }
 
 // The card shown when any page is shared (Discord, Slack, X, LinkedIn, iMessage).
-const SHARE_IMAGE = {
+export const SHARE_IMAGE = {
   url: "/opengraph-image.png",
   width: 1200,
   height: 630,
